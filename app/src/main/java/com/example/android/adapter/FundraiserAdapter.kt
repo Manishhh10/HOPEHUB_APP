@@ -12,6 +12,7 @@ import com.example.android.R
 import com.example.android.model.FundraiserModel
 import com.example.android.ui.activity.FundraiserDetailActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.squareup.picasso.Picasso
 import java.text.NumberFormat
 import java.util.*
 
@@ -32,6 +33,7 @@ class FundraiserAdapter(
         val btnEdit: ImageButton = itemView.findViewById(R.id.btnEdit)
         val btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
         val tvStatus: TextView = itemView.findViewById(R.id.tvStatus)
+        val ivFundraiser: ImageView = itemView.findViewById(R.id.ivFundraiser)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +43,11 @@ class FundraiserAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fundraiser = data[position]
+        Picasso.get()
+            .load(fundraiser.imageUrl)
+            .placeholder(R.drawable.error_image)
+            .error(R.drawable.error_image)
+            .into(holder.ivFundraiser)
         val currencyFormat = NumberFormat.getCurrencyInstance(Locale.getDefault())
         holder.tvTitle.text = fundraiser.title
         holder.tvProgress.text = "${currencyFormat.format(fundraiser.currentAmount)} raised of ${currencyFormat.format(fundraiser.targetAmount)}"
