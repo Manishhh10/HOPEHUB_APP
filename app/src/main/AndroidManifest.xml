@@ -11,14 +11,23 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        tools:replace="android:fullBackupContent"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Android"
+        android:theme="@style/Theme.YourAppName"
+        tools:replace="android:fullBackupContent"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activity.UpdateProductActivity"
+            android:name=".ui.activity.FundraiserDetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.UpdateFundraiserActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +45,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.AddProductActivity"
+            android:name=".ui.activity.CreateFundraiserActivity"
+            android:theme="@style/Theme.YourAppName"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +55,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.ProductDashboardActivity"
+            android:name=".ui.activity.FundraiserDashboardActivity"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

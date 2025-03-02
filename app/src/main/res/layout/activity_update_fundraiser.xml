@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CreateFundraiserActivity">
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:hint="Fundraiser Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <EditText
+        android:id="@+id/etReason"
+        android:hint="Fundraising Reason"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:hint="Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <EditText
+        android:id="@+id/etTargetAmount"
+        android:hint="Target Amount"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <EditText
+        android:id="@+id/etStartDate"
+        android:hint="Start Date (dd/MM/yyyy)"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <EditText
+        android:id="@+id/etEndDate"
+        android:hint="End Date (dd/MM/yyyy)"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:id="@+id/btnUpdateFundraiser"
+        android:text="Update Product"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

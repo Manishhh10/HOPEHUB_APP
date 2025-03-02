@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
                 loadingUtils.dismiss()
                 if (success) {
                     // Navigate to Home Page
-                    val intent = Intent(this@LoginActivity, HomePageActivity::class.java)
+                    val intent = Intent(this@LoginActivity, FundraiserDashboardActivity::class.java)
                     startActivity(intent)
                     finish() // Optional: Close the login activity
                 } else {

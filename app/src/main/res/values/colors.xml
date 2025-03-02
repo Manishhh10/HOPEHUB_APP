@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_color">#6200EE</color>
+    <color name="progress_color">#4CAF50</color>
+    <color name="green">#4CAF50</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="grey">#BDBDBD</color>
 </resources>
