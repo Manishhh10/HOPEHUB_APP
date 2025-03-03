@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
@@ -13,16 +14,15 @@
         android:padding="16dp"
         tools:context=".ui.activity.FundraiserDetailActivity">
 
-        <!-- Fundraiser Image -->
         <ImageView
             android:id="@+id/ivFundraiser"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/grey"
             tools:src="@drawable/placeholder"/>
 
-        <!-- Title -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
@@ -30,12 +30,12 @@
             android:layout_marginTop="16dp"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/dark_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivFundraiser"
             tools:text="Help Save the Rainforest"/>
 
-        <!-- Category -->
         <TextView
             android:id="@+id/tvCategory"
             android:layout_width="wrap_content"
@@ -43,111 +43,109 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/category_bg"
             android:padding="4dp"
-            android:textColor="@android:color/white"
+            android:textColor="@color/white"
             android:textSize="14sp"
+            android:backgroundTint="@color/primary_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
             tools:text="Environment"/>
 
-        <!-- Progress Bar -->
         <ProgressBar
             android:id="@+id/progressBar"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="0dp"
             android:layout_height="8dp"
             android:layout_marginTop="16dp"
+            android:progressTint="@color/primary_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvCategory"/>
 
-        <!-- Current Amount -->
         <TextView
             android:id="@+id/tvCurrentAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@color/green"
+            android:textColor="@color/primary_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressBar"
             tools:text="Raised: $1,500"/>
 
-        <!-- Target Amount -->
         <TextView
             android:id="@+id/tvTargetAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/dark_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressBar"
             tools:text="Target: $5,000"/>
 
-        <!-- Donation Count -->
         <TextView
             android:id="@+id/tvDonationCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/dark_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvCurrentAmount"
             tools:text="Donations: 42"/>
 
-        <!-- Dates -->
         <TextView
             android:id="@+id/tvDates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/dark_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTargetAmount"
             tools:text="01/05/2024 - 30/06/2024"/>
 
-        <!-- Reason Label -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Fundraising Reason:"
             android:textStyle="bold"
+            android:textColor="@color/dark_text"
             app:layout_constraintTop_toBottomOf="@id/tvDonationCount"/>
 
-        <!-- Reason -->
         <TextView
             android:id="@+id/tvReason"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:textSize="16sp"
+            android:textColor="@color/dark_text"
             app:layout_constraintTop_toBottomOf="@+id/tvDonationCount"
-            tools:text="We need to protect 1000 acres of rainforest from deforestation..."/>
+            tools:text="We need to protect 1000 acres of rainforest..."/>
 
-        <!-- Location Label -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Location:"
             android:textStyle="bold"
+            android:textColor="@color/dark_text"
             app:layout_constraintTop_toBottomOf="@id/tvReason"/>
 
-        <!-- Location -->
         <TextView
             android:id="@+id/tvLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/dark_text"
             app:layout_constraintTop_toBottomOf="@+id/tvReason"
             tools:text="Amazon Rainforest, Brazil"/>
 
-        <!-- Donate Button -->
         <Button
             android:id="@+id/btnDonate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="24dp"
             android:text="Donate Now"
             android:backgroundTint="@color/primary_color"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/tvLocation"/>
 
         <TextView
@@ -170,27 +168,28 @@
             android:orientation="horizontal"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/tvLocation"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp">
 
-        <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Edit"
-            android:backgroundTint="@color/blue"
-            android:textColor="@android:color/white"/>
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/dark_text"
+                android:layout_marginEnd="4dp"/>
 
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Delete"
-            android:backgroundTint="@color/red"
-            android:textColor="@android:color/white"/>
-
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:backgroundTint="@color/danger_red"
+                android:textColor="@color/white"
+                android:layout_marginStart="4dp"/>
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

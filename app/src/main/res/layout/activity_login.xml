@@ -3,50 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background"
     tools:context=".ui.activity.LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textColor="@color/dark_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color"
+        app:hintTextColor="@color/primary_color">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Email" />
-
+            android:hint="Email"
+            android:textColor="@color/dark_text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxStrokeColor="@color/primary_color"
+        app:hintTextColor="@color/primary_color">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Password" />
+            android:hint="Password"
+            android:textColor="@color/dark_text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Forget Password?" />
+        android:text="Forgot Password?"
+        android:textColor="@color/secondary"
+        android:textAlignment="textEnd"
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_height="48dp"
+        android:text="Login"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/colorOnPrimary"
+        android:textAllCaps="false"
+        android:elevation="2dp"
+        android:layout_marginBottom="24dp"/>
 
     <TextView
         android:id="@+id/lblSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have a account.Create account?" />
+        android:text="Don't have an account? Create account"
+        android:textColor="@color/dark_text"
+        android:gravity="center">
+    </TextView>
 </LinearLayout>

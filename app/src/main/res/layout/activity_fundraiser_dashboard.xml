@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.activity.FundraiserDashboardActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -19,13 +20,14 @@
         android:layout_margin="16dp"
         android:contentDescription="Add Fundraiser"
         android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/secondary"
+        app:tint="@color/dark_text"
         app:layout_anchorGravity="bottom|end"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/primary_color"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

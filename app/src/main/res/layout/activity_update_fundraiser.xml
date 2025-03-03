@@ -3,61 +3,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background"
     tools:context=".ui.activity.CreateFundraiserActivity">
 
-    <EditText
-        android:id="@+id/etTitle"
-        android:hint="Fundraiser Title"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fundraiser Title"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etReason"
-        android:hint="Fundraising Reason"
-        android:inputType="textMultiLine"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fundraising Reason"
+            android:inputType="textMultiLine"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etLocation"
-        android:hint="Location"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etTargetAmount"
-        android:hint="Target Amount"
-        android:inputType="numberDecimal"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etTargetAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target Amount"
+            android:inputType="numberDecimal"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etStartDate"
-        android:hint="Start Date (dd/MM/yyyy)"
-        android:focusable="false"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Date (dd/MM/yyyy)"
+            android:focusable="false"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etEndDate"
-        android:hint="End Date (dd/MM/yyyy)"
-        android:focusable="false"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginBottom="24dp"
+        app:boxStrokeColor="@color/primary_color">
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Date (dd/MM/yyyy)"
+            android:focusable="false"
+            android:textColor="@color/dark_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnUpdateFundraiser"
-        android:text="Update Product"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Update Fundraiser"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:elevation="2dp"/>
 </LinearLayout>

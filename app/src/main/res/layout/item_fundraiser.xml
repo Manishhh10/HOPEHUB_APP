@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,50 +15,47 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Fundraiser Image -->
         <ImageView
             android:id="@+id/ivFundraiser"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/error_image"/>
+            android:src="@drawable/error_image"
+            android:background="@color/grey"/>
 
-        <!-- Title -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:textColor="@color/dark_text"/>
 
-        <!-- Progress Bar -->
         <ProgressBar
             android:id="@+id/progressBar"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:progressTint="@color/green"
+            android:progressTint="@color/primary_color"
             android:progressBackgroundTint="@color/grey"
             android:layout_marginTop="8dp"/>
 
-        <!-- Progress Text -->
         <TextView
             android:id="@+id/tvProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginTop="4dp"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:textColor="@color/dark_text"/>
 
-        <!-- Action Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
-            <!-- Donate Button -->
             <Button
                 android:id="@+id/btnDonate"
                 android:layout_width="0dp"
@@ -65,28 +63,26 @@
                 android:layout_weight="1"
                 android:text="Donate Now"
                 android:backgroundTint="@color/primary_color"
+                android:textColor="@color/white"
                 android:visibility="gone"/>
 
-            <!-- Edit Button -->
             <ImageButton
                 android:id="@+id/btnEdit"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:backgroundTint="@color/secondary"
                 android:src="@drawable/baseline_edit_24"
-                android:background="?selectableItemBackgroundBorderless"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
-            <!-- Delete Button -->
             <ImageButton
                 android:id="@+id/btnDelete"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/baseline_delete_24"
-                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/danger_red"
                 android:visibility="gone"/>
         </LinearLayout>
 
-        <!-- Completed Status -->
         <TextView
             android:id="@+id/tvStatus"
             android:layout_width="match_parent"
@@ -98,6 +94,5 @@
             android:visibility="gone"
             android:gravity="center"
             android:layout_marginTop="8dp"/>
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>
