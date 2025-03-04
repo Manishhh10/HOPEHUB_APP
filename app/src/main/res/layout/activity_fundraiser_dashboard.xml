@@ -17,12 +17,12 @@
         android:id="@+id/fabAddFundraiser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="Add Fundraiser"
         android:src="@drawable/baseline_add_24"
         app:backgroundTint="@color/secondary"
-        app:tint="@color/dark_text"
-        app:layout_anchorGravity="bottom|end"/>
+        app:tint="@color/dark_text" />
 
     <ProgressBar
         android:id="@+id/progressBar"

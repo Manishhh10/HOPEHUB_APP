@@ -52,8 +52,8 @@ class FundraiserDetailActivity : AppCompatActivity() {
             tvCategory.text = fundraiser.category
             tvReason.text = fundraiser.reason
             tvLocation.text = fundraiser.location
-            tvTargetAmount.text = "Target: ${formatCurrency(fundraiser.targetAmount)}"
-            tvCurrentAmount.text = "Raised: ${formatCurrency(fundraiser.currentAmount)}"
+            tvTargetAmount.text = "Target: Rs.${(fundraiser.targetAmount)}"
+            tvCurrentAmount.text = "Raised: Rs.${(fundraiser.currentAmount)}"
             tvDonationCount.text = "Donations: ${fundraiser.donationCount}"
             tvDates.text = "${fundraiser.startDate} - ${fundraiser.endDate}"
             progressBar.progress = (fundraiser.currentAmount / fundraiser.targetAmount * 100).toInt()
@@ -157,9 +157,6 @@ class FundraiserDetailActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun formatCurrency(amount: Double): String {
-        return NumberFormat.getCurrencyInstance(Locale.getDefault()).format(amount)
-    }
 
     private fun showError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

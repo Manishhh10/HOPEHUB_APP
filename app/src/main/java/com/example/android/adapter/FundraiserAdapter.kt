@@ -50,7 +50,7 @@ class FundraiserAdapter(
             .into(holder.ivFundraiser)
         val currencyFormat = NumberFormat.getCurrencyInstance(Locale.getDefault())
         holder.tvTitle.text = fundraiser.title
-        holder.tvProgress.text = "${currencyFormat.format(fundraiser.currentAmount)} raised of ${currencyFormat.format(fundraiser.targetAmount)}"
+        holder.tvProgress.text = "Rs.${"%.2f".format(fundraiser.currentAmount)} raised of Rs.${"%.2f".format(fundraiser.targetAmount)}"
 
         val progress = (fundraiser.currentAmount / fundraiser.targetAmount * 100).toInt()
         holder.progressBar.progress = progress
@@ -111,8 +111,7 @@ class FundraiserAdapter(
         val tvMax = dialogView.findViewById<TextView>(R.id.tvMaxAmount)
 
         val currencyFormat = NumberFormat.getCurrencyInstance(Locale.getDefault())
-        tvMax.text = context.getString(R.string.max_donation, currencyFormat.format(remainingAmount))
-
+        tvMax.text = context.getString(R.string.max_donation, "Rs.${"%.2f".format(remainingAmount)}")
         AlertDialog.Builder(context)
             .setTitle("Make a Donation")
             .setView(dialogView)
