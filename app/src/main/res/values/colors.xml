@@ -3,18 +3,18 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="progress_color">#4CAF50</color>
-    <color name="green">#4CAF50</color>
+    <color name="green">#0bb094</color>
     <color name="colorPrimary">#09442d</color>
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="grey">#BDBDBD</color>
     <color name="blue">#2196F3</color>
     <color name="red">#F44336</color>
     //new color theme
-    <color name="primary_color">#09442d</color>// HopeHub's's primary dark green
-    <color name="secondary">#b9ff66</color>// HopeHub's's neon green
-    <color name="accent">#0b4029</color>
-    <color name="background">#f8f7e8</color>
-    <color name="off_white">#f8f7e8</color>
+    <color name="primary_color">#190191</color>// HelpNepal's primary dark green
+    <color name="secondary">#52fff1</color>// HelpNepal's neon green
+    <color name="accent">#190191</color>
+    <color name="background">#ffffff</color>
+    <color name="off_white">#ffffff</color>
     <color name="dark_text">#333</color>
-    <color name="danger_red">#E30613</color>
+    <color name="danger_red">#ff1f1f</color>
 </resources>

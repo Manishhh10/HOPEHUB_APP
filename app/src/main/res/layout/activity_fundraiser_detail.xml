@@ -105,10 +105,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Fundraising Reason:"
-            android:textStyle="bold"
+            android:text="Donation Reason:"
             android:textColor="@color/dark_text"
-            app:layout_constraintTop_toBottomOf="@id/tvDonationCount"/>
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvDonationCount"
+            tools:layout_editor_absoluteX="16dp" />
 
         <TextView
             android:id="@+id/tvReason"

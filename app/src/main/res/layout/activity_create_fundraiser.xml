@@ -38,12 +38,12 @@
 
     <EditText
         android:id="@+id/editReason"
-        android:hint="Reason for Fundraising"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Reason for Donation"
         android:inputType="textMultiLine"
-        android:minLines="3"
-        android:layout_marginBottom="8dp"/>
+        android:minLines="3" />
 
     <EditText
         android:id="@+id/editLocation"
@@ -78,7 +78,7 @@
 
     <Button
         android:id="@+id/btnCreateHope"
-        android:text="Create A Hope"
+        android:text="Create A Donation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primary_color"

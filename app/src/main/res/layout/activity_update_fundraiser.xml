@@ -15,12 +15,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:boxStrokeColor="@color/primary_color">
+
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fundraiser Title"
-            android:textColor="@color/dark_text"/>
+            android:hint="Donation Title"
+            android:textColor="@color/dark_text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -28,13 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:boxStrokeColor="@color/primary_color">
+
         <EditText
             android:id="@+id/etReason"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fundraising Reason"
+            android:hint="Donation Reason"
             android:inputType="textMultiLine"
-            android:textColor="@color/dark_text"/>
+            android:textColor="@color/dark_text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -96,8 +98,8 @@
         android:id="@+id/btnUpdateFundraiser"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:text="Update Fundraiser"
         android:backgroundTint="@color/primary_color"
-        android:textColor="@color/white"
-        android:elevation="2dp"/>
+        android:elevation="2dp"
+        android:text="Update Donation"
+        android:textColor="@color/white" />
 </LinearLayout>
